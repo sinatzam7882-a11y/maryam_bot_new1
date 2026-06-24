@@ -28,7 +28,12 @@ if not BOT_TOKEN:
 if not GROQ_API_KEY:
     raise ValueError("❌ GROQ_API_KEY در متغیرهای محیطی تنظیم نشده است!")
 
+logger.info(f"✅ ربات با موفقیت راه‌اندازی شد!")
+logger.info(f"📢 کانال: {CHANNEL_ID}")
+logger.info(f"👑 ادمین: {ADMIN_ID}")
+
 client = Groq(api_key=GROQ_API_KEY)
+
 try:
     client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 except Exception as e:
