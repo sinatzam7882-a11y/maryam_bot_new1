@@ -2,12 +2,10 @@ import os
 import json
 import logging
 from datetime import datetime
-from dotenv import load_dotenv
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 from telegram import Update, ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, ContextTypes, filters, CallbackQueryHandler
-from telegram.error import TelegramError, BadRequest, Forbidden, ChatMigrated
 from groq import Groq
 
 # ==================== تنظیمات لاگینگ ====================
@@ -16,14 +14,21 @@ logging.basicConfig(
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
-load_dotenv()
 
 # ==================== تنظیمات ====================
-BOT_TOKEN = os.getenv("BOT_TOKEN")   # ← توکن بات از BotFather
-GROQ_API_KEY = os.getenv("GROQ_API_KEY")         # ← کلید Groq
-ADMIN_ID = 8065571732  # 🔴 این رو با ایدی خودت عوض کن!
-CHANNEL_ID = "@synapdse_os"  # آیدی کانال
+# خواندن مستقیم از متغیرهای محیطی سیستم (بدون نیاز به dotenv)
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
+ADMIN_ID = int(os.environ.get("ADMIN_ID", "8065571732"))
+CHANNEL_ID = os.environ.get("CHANNEL_ID", "@synapdse_os")
 
+# بررسی وجود توکن‌ها
+if not BOT_TOKEN:
+    raise ValueError("❌ BOT_TOKEN در متغیرهای محیطی تنظیم نشده است!")
+if not GROQ_API_KEY:
+    raise ValueError("❌ GROQ_API_KEY در متغیرهای محیطی تنظیم نشده است!")
+
+client = Groq(api_key=GROQ_API_KEY)
 try:
     client = Groq(api_key=GROQ_API_KEY) if GROQ_API_KEY else None
 except Exception as e:
