@@ -1,0 +1,25 @@
+# فایل‌های حاوی اطلاعات محرمانه
+.env
+*.env
+*.env.local
+*.env.*.local
+
+# فایل‌های دیتابیس
+*.db
+*.sqlite
+*.sqlite3
+
+# فایل‌های Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# فایل‌های لاگ
+*.log

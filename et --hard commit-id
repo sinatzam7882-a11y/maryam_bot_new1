@@ -1,0 +1,29 @@
+[33ma7c4546[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m Remove hardcoded API keys
+[33mc0d3e91[m h1
+[33m3072892[m[33m ([m[1;31morigin/main[m[33m)[m edit join channel
+[33me33e262[m edit join channel
+[33m9150a59[m edit join channel
+[33m7a86226[m edit join channel
+[33mec43639[m edit join channel
+[33m4785324[m ID
+[33mea65a63[m clown
+[33m8a1e0b7[m feat: complete telegram bot with channel membership, excel export, and multi-path navigation
+[33m47c07fe[m رفع کامل باگ‌های تایید و ثبت‌نام
+[33m578b907[m رفع کامل باگ‌های تایید و ثبت‌نام
+[33mab9fa8b[m رفع باگ دکمه‌های تایید، ویرایش و انصراف
+[33m93f30de[m رفع کامل باگ‌های ویرایش و انصراف + مدیریت کاربران
+[33mfc8c9fc[m رفع باگ ویرایش و انصراف + پیام‌های کامل تایید
+[33m7189c91[m اضافه کردن قابلیت تایید، ویرایش و انصراف با پیام‌های اختصاصی
+[33m29deeca[m نسخه نهایی بات با اطلاعات شخصی (نام، نام خانوادگی، تاریخ تولد، شماره، شهر) و خروجی اکسل
+[33m1b7dc86[m اضافه کردن openpyxl به requirements
+[33m60b112a[m Add Excel
+[33m144dc99[m نسخه پریمیوم ربات مشاوره کسب و کار
+[33m92f95c0[m نسخه نهایی با منوی دکمه‌ای کامل
+[33md677f0e[m ذخیره اطلاعات در JSON به جای SQLite
+[33m64c1ea0[m ذخیره اطلاعات در JSON به جای SQLite
+[33m9764fd3[m نسخه نهایی ثبت‌نام ساده و بدون باگ
+[33m1ab749e[m اضافه کردن سیستم ثبت‌نام و پرسشنامه کامل
+[33m03b10fd[m اضافه کردن سیستم ثبت‌نام و پرسشنامه کامل
+[33m43d6efc[m اضافه کردن CommandHandler برای start
+[33m5a20e03[m اضافه کردن متن اختصاصی مریم شهبازی
+[33m31e1d26[m اولین نسخه بات تلگرام با Groq
